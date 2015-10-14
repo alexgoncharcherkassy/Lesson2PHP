@@ -1,0 +1,12 @@
+{
+    "name": "carbon/carbon",
+    "require": {
+        "nesbot/carbon": "^1.20"
+    },
+    "authors": [
+        {
+            "name": "Aleksandr Gonchar",
+            "email": "shuric2005@mail.ru"
+        }
+    ]
+}
