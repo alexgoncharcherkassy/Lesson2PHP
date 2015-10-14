@@ -8,5 +8,9 @@
             "name": "Aleksandr Gonchar",
             "email": "shuric2005@mail.ru"
         }
-    ]
+    ],
+     "require": {
+        "php": ">=5.3.0",
+        "symfony/translation": "~2.6|~3.0"
+  }
 }
