@@ -8,27 +8,27 @@
  */
 namespace lesson2;
 
-require 'vendor/autoload.php';
-
 use Carbon\Carbon;
 
-class MyDate extends Carbon
+class ClassDate extends Carbon
 {
-    public static function dateInfo($day, $month, $year)
+    private $day;
+    private $month;
+    private $year;
+
+    public function dateInfo($day, $month, $year)
     {
+        $this->day=$day;
+        $this->month=$month;
+        $this->year=$year;
         $yearnow=date("Y");
         $nowday=Carbon::instance(new \DateTime());
-        if (!self::validDate($day, $month,$year)) {
+        if (!$this->validDate()) {
             $mes='An incorrect date format';
             return $mes;
         }
         $newyear=Carbon::instance(new \DateTime("01.01.$yearnow"));
-        if ($day==null || $month==null || $year==null) {
-            $day=date("d");
-            $month=date("m");
-            $year=date("Y");
-        }
-        $enterdate=Carbon::instance(new \DateTime("$day.$month.$year"));
+        $enterdate=Carbon::instance(new \DateTime("$this->day.$this->month.$this->year"));
         $diffday=($enterdate->day)-($nowday->day);
         $diffmonth=($enterdate->month)-($nowday->month);
         $diffyear=($enterdate->year)-($nowday->year);
@@ -49,9 +49,9 @@ class MyDate extends Carbon
         return  $mes;
     }
 
-    private static function validDate($day, $month, $year)
+    private function validDate()
     {
-        if (checkdate($month, $day, $year)) {
+        if (checkdate($this->month, $this->day, $this->year)) {
             return true;
         }
         return false;

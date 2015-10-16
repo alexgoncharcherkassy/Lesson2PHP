@@ -1,5 +1,7 @@
 <?php
-require_once 'ClassDate.php';
+require 'vendor/autoload.php';
+use lesson2\ClassDate;
+$mydate=new \ClassDate();
 ?>
 
 <!doctype html>
@@ -23,7 +25,7 @@ require_once 'ClassDate.php';
     <br/>
 <?php
 if (isset($_POST['day']) && isset($_POST['month']) && isset($_POST['year'])) {
-    echo \lesson2\MyDate::dateInfo($_POST['day'], $_POST['month'], $_POST['year']) . "<br/>";
+    echo $mydate->dateInfo($_POST['day'], $_POST['month'], $_POST['year']) . "<br/>";
 } else {
     echo '<strong>Enter date!!!</strong>';
 }
