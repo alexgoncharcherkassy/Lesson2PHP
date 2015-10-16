@@ -1,7 +1,9 @@
 <?php
-require 'vendor/autoload.php';
+require_once 'vendor/autoload.php';
+
 use lesson2\ClassDate;
-$mydate=new \ClassDate();
+
+$mydate=new ClassDate();
 ?>
 
 <!doctype html>
