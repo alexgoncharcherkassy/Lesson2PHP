@@ -11,7 +11,8 @@
             "email": "shuric2005@mail.ru"
         }
     ],
-    "autoload": {
-        "psr-0": {"lesson2\\": "./"}
-     }
+  "autoload": {
+    "psr-0": {"lesson2\\": "./"}
+  }
+
 }

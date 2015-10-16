@@ -2,7 +2,6 @@
 require_once 'vendor/autoload.php';
 
 use lesson2\ClassDate;
-
 $mydate=new ClassDate();
 ?>
 
