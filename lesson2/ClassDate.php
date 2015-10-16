@@ -40,7 +40,7 @@ class ClassDate extends Carbon
         if ($diffday==0 && $diffmonth==0 && $diffyear==0) {
             $mes.='You enter the current date';
         } elseif ($diffday>0 || $diffmonth>0 || $diffyear>0) {
-            $mes.='More than the current date entered in the '.$diffday.' days and '.$diffmonth.' month '.$diffyear.' year(s)';
+            $mes.='More than the current date entered in the '.abs($diffday).' days and '.abs($diffmonth).' month '.abs($diffyear).' year(s)';
         } else {
             $mes.='Less than the current date entered by '.abs($diffday).' days and '.abs($diffmonth).' month '.abs($diffyear).' year(s)';
         }
